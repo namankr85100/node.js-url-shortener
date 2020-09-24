@@ -30,7 +30,7 @@ app.get('/:shortUrl', async (req, res) => {
 
   res.redirect(shortUrl.full)
 })
-
-app.listen(5000,()=>{
-  console.log('listen 5000')
+var port = process.env.PORT || 5000;
+app.listen(port,()=>{
+  console.log('listening ')
 });
